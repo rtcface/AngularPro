@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   ]
 })
 export class IncreasingComponent {
-  @Input('valor') progreso: number = 2; // renamed to progreso
+  @Input('valor') progreso: number = 20; // renamed to progreso
   //@Input() progreso: number = 2;
 
   @Output() cambioValor: EventEmitter<number> = new EventEmitter();

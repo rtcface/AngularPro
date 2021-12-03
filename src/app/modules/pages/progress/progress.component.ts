@@ -17,5 +17,11 @@ export class ProgressComponent {
   get getProgreso2() {
     return `${this.progreso2}%`;
   }
+
+  cambiarValorHijo(valor: number) {
+    {
+      this.progreso1 = this.progreso1 + valor;
+    }
+  }
   
 }

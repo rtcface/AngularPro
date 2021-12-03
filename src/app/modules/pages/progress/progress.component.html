@@ -2,9 +2,26 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <app-increasing
-                [valor]="15"
-               (cambioValor)="progreso2" ></app-increasing>                
+                <div class="progress-bar bg-warning active 
+                    progress-bar-striped" 
+                    style="height:5px;" 
+                    [style.width]="getProgreso1"
+                    role="progressbar">                         
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="progress-bar bg-success active 
+                    progress-bar-striped" 
+                    style="height:5px;" 
+                    [style.width]="getProgreso2"
+                    role="progressbar">                         
+                </div>               
             </div>
         </div>
     </div>
@@ -14,15 +31,18 @@
         <div class="card">
             <div class="card-body">
                <app-increasing 
-               [valor]="45"
-               (cambioValor)="progreso2" ></app-increasing>
+               [valor]="progreso1"
+               (cambioValor)="progreso1=$event"></app-increasing>
             </div>                
         </div>
     </div>
     <div class="col-6">
         <div class="card">
             <div class="card-body">
-                <app-increasing></app-increasing>
+                <app-increasing
+                [valor]="progreso2"
+                (cambioValor)="progreso2=$event">
+                ></app-increasing>
             </div>
         </div>
     </div>
