@@ -31,6 +31,7 @@
         <div class="card">
             <div class="card-body">
                <app-increasing 
+               [btnClass]="'btn-warning'"
                [valor]="progreso1"
                (cambioValor)="progreso1=$event"></app-increasing>
             </div>                
@@ -41,7 +42,8 @@
             <div class="card-body">
                 <app-increasing
                 [valor]="progreso2"
-                (cambioValor)="progreso2=$event">
+                (cambioValor)="progreso2=$event"
+                [btnClass]="'btn-success'">
                 ></app-increasing>
             </div>
         </div>

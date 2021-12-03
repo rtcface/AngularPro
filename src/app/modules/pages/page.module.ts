@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GraficaComponent } from './grafica/grafica.component';
 import { ProgressComponent } from './progress/progress.component';
 import { NotpagefoundComponent } from './notpagefound/notpagefound.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -23,6 +24,7 @@ import { NotpagefoundComponent } from './notpagefound/notpagefound.component';
     CommonModule,
     FormsModule,
     ComponentsModule,
+    ChartsModule
   ],
   exports: [
     NotpagefoundComponent,

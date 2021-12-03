@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { PageMainComponent } from './pages/page-main.component';
 
+
 @NgModule({
   declarations: [
     PageMainComponent

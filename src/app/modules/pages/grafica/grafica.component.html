@@ -1,1 +1,37 @@
-<p>grafica works!</p>
+<!-- ============================================================== -->
+<!-- Start Page Content -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-6">
+        <app-donut-grafica 
+            title="Primera Grafica"
+            [doughnutChartLabels]=labels
+            [doughnutChartData]=data>
+        </app-donut-grafica>        
+    </div>
+    <div class="col-6">
+        <app-donut-grafica 
+            title="Segunda Grafica"
+            [doughnutChartLabels]=labels1
+            [doughnutChartData]=data1>
+        </app-donut-grafica>            
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <app-donut-grafica 
+        title="Tercera Grafica"
+        [doughnutChartLabels]=labels2
+        [doughnutChartData]=data2>
+        </app-donut-grafica>      
+    </div>
+    <div class="col-6">
+        <app-donut-grafica 
+        title="Cuarta Grafica"
+        [doughnutChartLabels]=labels3
+        [doughnutChartData]=data3>
+    </app-donut-grafica>          
+    </div>
+</div>
+
