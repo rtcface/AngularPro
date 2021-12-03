@@ -1,1 +1,29 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <app-increasing
+                [valor]="15"
+               (cambioValor)="progreso2" ></app-increasing>                
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+               <app-increasing 
+               [valor]="45"
+               (cambioValor)="progreso2" ></app-increasing>
+            </div>                
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-increasing></app-increasing>
+            </div>
+        </div>
+    </div>
+</div>
