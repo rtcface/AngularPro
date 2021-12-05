@@ -11,8 +11,7 @@ export class AccountSettingsComponent implements OnInit {
   
  
 
-  constructor( private _themeService: ModulesSettingsService ) {
-   
+  constructor( private _themeService: ModulesSettingsService ) {  
   }
 
   
