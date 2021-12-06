@@ -10,8 +10,8 @@ export class PromisesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {   
+    this.getUsers().then( users => console.log(users)); 
     // const promesa = new Promise<void>( (resolve, reject) => {
     //   let contador = 0;
     //   const intervalo = setInterval( () => {
@@ -24,13 +24,20 @@ export class PromisesComponent implements OnInit {
     //   }, 1000);
     // }
     // );
+  }
+
+
+  getUsers(): Promise<any> {
+    return new Promise( resolve => {
+      fetch('https://reqres.in/api/users')
+      .then( resp => resp.json() )
+      .then( body => resolve(body.data) );
+    });
 
     
 
-
   }
-
-  }
+}
 
   
 
