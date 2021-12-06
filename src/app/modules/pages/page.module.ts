@@ -10,6 +10,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { NotpagefoundComponent } from './notpagefound/notpagefound.component';
 import { ChartsModule } from 'ng2-charts';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
 
 
 
@@ -20,6 +21,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     GraficaComponent,
     DashboardComponent,
     AccountSettingsComponent,
+    PromisesComponent,
 
   ],
   imports: [
