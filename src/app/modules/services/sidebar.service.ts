@@ -12,9 +12,22 @@ export class SidebarService {
       title: 'Principal',
       icon: 'mdi mdi-gauge',
       submenu: [
-        { title: 'Principal', url: 'dashboard' },
+        { title: 'Principal', url: '/' },
+        { title: 'Barras de progreso', url: 'progress' },
+        { title: 'Graficas', url: 'grafica' },
+      ]
+    },
+    {
+      title: 'otra',
+      icon: 'mdi mdi-gauge',
+      submenu: [
+        { title: 'Principal', url: '/' },
         { title: 'Barras de progreso', url: 'progress' },
         { title: 'Graficas', url: 'grafica' },
       ]
     }];
+
+  public getMenu() {
+    return this.menu;
+  }
 }
