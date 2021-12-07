@@ -11,6 +11,7 @@ import { NotpagefoundComponent } from './notpagefound/notpagefound.component';
 import { ChartsModule } from 'ng2-charts';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -22,6 +23,7 @@ import { PromisesComponent } from './promises/promises.component';
     DashboardComponent,
     AccountSettingsComponent,
     PromisesComponent,
+    RxjsComponent,
 
   ],
   imports: [
