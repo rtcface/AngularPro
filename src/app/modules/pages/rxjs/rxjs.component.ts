@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { Observable } from 'rxjs';
-import { retry } from 'rxjs/operators';
+import { Observable, interval } from 'rxjs';
+import { retry, take, map, filter } from 'rxjs/operators';
 
 
 @Component({
@@ -36,8 +36,32 @@ export class RxjsComponent  {
     //   error => console.error( 'Error en el obs', error ),
     //   () => console.log( 'El observador termino' )
     // );
-    let index = 0;
-    const names$ = new Observable( observer => {
+    
+    // this.retornaObservable().pipe( retry(1) ).subscribe(
+    //   name => console.log( 'Subs', name ),
+    //   error => console.error( 'Error en el obs', error ),
+    //   () => console.log( 'El observador termino' )
+    //   );  
+
+    this.retornaIntervalo()
+      .subscribe( console.log );
+  
+}
+
+retornaIntervalo(): Observable<number> {
+ return interval(400)
+          .pipe( 
+            map( valor => valor + 1 ),
+            filter( valor => ( valor % 2 === 0 ) ),
+            take(15),            
+            );
+
+}  
+
+retornaObservable(): Observable<string> {
+  let index = 0;
+
+    return new Observable( observer => {
       let names = ['Juan', 'Pedro', 'Maria', 'Sofia', 'Santiago', 'Andres', 'victor', 'jose'];
      
       let interval = setInterval( () => {
@@ -47,26 +71,14 @@ export class RxjsComponent  {
           clearInterval( interval );
           observer.complete();
         }
-
         if ( index >= 8 ) {
           observer.error('Auxilio');
         }
-
-
       }, 1000 );
-
-
     } );
 
-    names$.pipe( retry(1) ).subscribe(
-      name => console.log( 'Subs', name ),
-      error => console.error( 'Error en el obs', error ),
-      () => console.log( 'El observador termino' )
-      );
-      
-      
+    
 
-  
 }
 
 }
